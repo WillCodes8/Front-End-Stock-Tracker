@@ -6,7 +6,7 @@ import Footer from "../components/footer";
 
 export default function Stocks() {
   return (
-    <main className="min-h-screen dark:bg-green-900 flex flex-col">
+    <main className="min-h-screen dark:bg-black flex flex-col">
 
       <div id="nav">
         <Navbar/>
