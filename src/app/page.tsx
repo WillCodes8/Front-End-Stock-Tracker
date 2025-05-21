@@ -3,7 +3,7 @@ import Navbar from "./components/navbar";
 import About from "./components/about";
 import Stocks from "./components/stocks";
 import Crypto from "./components/crypto";
-import Footer from "./components/footer";
+import { Computer } from "./utils/icons";
 
 export default function Home() {
   return (
@@ -21,18 +21,22 @@ export default function Home() {
 
       <div id="rightSide" className="w-1/2 -mt-8 h-[400px] flex flex-col justify-center">
         <div id="stock" className="text-center">
-          <Stocks/>
+          <a href="/stocks"><Stocks/></a>
         </div>
 
         <div id="crypto" className="text-center">
-          <Crypto/>
+          <a href="/crypto"><Crypto/></a>
         </div>
       </div>
 
       </div>
 
-      <div id="footer" className="text-center mt-20">
-            <Footer/>
+      <div id="footer" className="flex justify-center text-white text-center font-bold pb-10">
+          
+          <div className="flex items-center gap-2">
+            Github:<a href="https://github.com/WillCodes8"><Computer/></a>
+          </div>
+          
       </div>
         
     </main>
