@@ -1,7 +1,7 @@
 const API_KEY = "tfteb8ZAaFjj2YUWyogY98QjBJxEUw32"
 const baseUrl = "https://api.polygon.io"
 
-export const getMarketTrends = async(ticker) => {
+export const getStockData = async(ticker) => {
     const url = `${baseUrl}/v2/aggs/ticker/${ticker}/prev?adjusted=true&apiKey=${API_KEY}`
 
     const data = await fetch(url)
