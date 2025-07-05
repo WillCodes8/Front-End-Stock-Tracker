@@ -19,7 +19,7 @@ const MarketTrends = () => {
     const [error, setError] = useState(null)
 
     useEffect(() => {
-        const tickerSymbols = ["GOOGL", "NVDA"];
+        const tickerSymbols = ["GOOGL", "NVDA", "VTI"];
 
         tickerSymbols.forEach(ticker => {
         getStockData(ticker)
@@ -45,7 +45,7 @@ const MarketTrends = () => {
     return(
         <div className="overflow-hidden flex">
             <ul className="flex gap-4 justify-center text-white py-4 animate-scroll">
-               {[...data, ...data, ...data, ...data, ...data].map((stock, index) => {
+               {[...data, ...data, ...data].map((stock, index) => {
                 const changePercent = ((stock.close - stock.open) / stock.open) * 100;
 
                     return (
