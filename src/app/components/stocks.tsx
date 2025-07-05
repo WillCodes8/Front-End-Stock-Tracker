@@ -2,18 +2,20 @@ import React from "react";
 import { ChartBarTwo } from "../utils/icons";
 
 const Stocks = () => {
-    return(
-        <div className="flex gap-8 justify-center h-max py-10 flex-row">
-            <div className="transform rounded-xl h-28 w-32 sm:h-40 sm:w-48 bg-teal-700 shadow-xl transition duration-300 hover:scale-120 cursor-pointer">
-            <div className="flex h-full justify-center items-center">
-                <ChartBarTwo className="w-15 h-15" />
-                <span className="font-bold text-white">Live Stock Prices, Charts, & Trends</span>
-                <ChartBarTwo className="w-15 h-15" />
-            </div>
-            </div>
+  return (
+    <div className="flex gap-8 justify-center h-max py-10 flex-row">
+      <div className="transform rounded-xl h-40 w-48 sm:h-64 sm:w-72 bg-teal-700 shadow-xl transition duration-300 hover:scale-125">
+        <div className="flex h-full justify-center items-center text-center px-4">
+          <span className="font-bold text-white text-lg">
+            Track Your Stocks Live! <br /><br />
+            <p className="text-xs">
+              Stay updated on price trends and explore stock data visualizations in real-time. Click to view your dashboard.
+            </p>
+          </span>
         </div>
+      </div>
+    </div>
+  );
+};
 
-    )
-}
-
-export default Stocks
+export default Stocks;

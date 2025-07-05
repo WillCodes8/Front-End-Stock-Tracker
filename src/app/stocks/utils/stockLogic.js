@@ -1,4 +1,4 @@
-const API_KEY = "tfteb8ZAaFjj2YUWyogY98QjBJxEUw32"
+const API_KEY = process.env.STOCK_KEY
 const baseUrl = "https://api.polygon.io"
 
 export const getStockData = async(ticker) => {

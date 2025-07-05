@@ -51,7 +51,7 @@ export default function Stocks() {
 
       </div>
 
-      <div id="footer" className="flex justify-center text-white text-center font-bold pb-10">
+      <div id="footer" className="flex justify-center text-white text-center font-bold pb-10 mt-10">
         <Footer/>
       </div>
 

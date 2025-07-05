@@ -1,6 +1,8 @@
 import React from "react";
 import { CloudUp } from "../utils/icons";
 
+/*
+
 const Crypto = () => {
     return(
         <div className="flex gap-8 justify-center h-max py-10 flex-row">
@@ -16,3 +18,5 @@ const Crypto = () => {
 }
 
 export default Crypto
+
+*/
