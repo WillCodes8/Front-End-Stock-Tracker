@@ -16,7 +16,7 @@ type StockInfo = {
 const MarketTrends = () => {
 
     const [data, setData] = useState<StockInfo[]>([]);
-    const [error, setError] = useState(null)
+    const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
         const tickerSymbols = ["GOOGL", "NVDA", "VTI"];
@@ -36,11 +36,19 @@ const MarketTrends = () => {
                 setData(prev => [...prev, ...info]);
             })
             .catch(error => {
-            console.error(error);
-            setError(error.message);
+                console.error(error);
+                setError(error?.message || "An unexpected error occurred.");
             });
         });
     }, []);
+
+    if (error) {
+    return (
+        <div className="mt-10 text-center text-red-500 font-semibold">
+            Error: {error}
+        </div>
+    );
+}
 
     return(
         <div className="overflow-hidden flex">

@@ -58,7 +58,7 @@ const DataContainer = ({ symbol, range }: Props) => {
 
         .catch(error => {
             console.error(error);
-            setError(error.message);
+            setError(error?.message || "An unexpected error occurred.");
         });
 
     }, [symbol])
@@ -66,6 +66,14 @@ const DataContainer = ({ symbol, range }: Props) => {
     if (!symbol) {
         return null; // or return a placeholder like <p>Enter a ticker to view data</p>
     }
+
+    if (error) {
+    return (
+        <div className="mt-10 text-center text-red-500 font-semibold">
+            Error: {error}
+        </div>
+    );
+}
     
     return(
         <div className="flex flex-grow mt-10 pb-12 px-6 gap-6">

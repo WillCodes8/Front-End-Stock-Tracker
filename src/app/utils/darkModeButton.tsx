@@ -5,10 +5,9 @@ interface Props{
     children: ReactNode;
     href?: string;
     onClick?: () => void;
-    className?: string;
 }
 
-const Button = ({children, onClick, className = "", href = "#_"} : Props) => {
+const Button = ({children, onClick, href = "#_"} : Props) => {
 
     const classes = `relative inline-flex items-center justify-start inline-block px-5 py-3 overflow-hidden font-bold rounded-full group`
 
