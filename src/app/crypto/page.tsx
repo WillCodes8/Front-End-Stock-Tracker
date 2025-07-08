@@ -1,5 +1,4 @@
 import Navbar from "../components/navbar";
-import MarketTrends from "./components/marketTrends";
 import Search from "./components/search";
 import DataContainer from "./components/dataContainer";
 import Footer from "../components/footer";
@@ -23,7 +22,7 @@ export default function Crypto() {
         </div>
 
         <div id="marketTrends" className="w-8/9 h-[80px] text-center">
-          <MarketTrends/>
+          
         </div>
 
         <div id="search" className="w-4/9 h-[50px] text-center">
