@@ -19,7 +19,7 @@ export default function Home() {
           <About />
         </div>
 
-        <div id="rightSide" className="w-1/2 h-full flex items-center justify-center">
+        <div id="rightSide" className="w-1/2 h-full flex items-center justify-center mt-3">
           <div className="w-full h-full flex items-center justify-center">
             <a href="/stocks" className="w-full h-full block">
               <Stocks />

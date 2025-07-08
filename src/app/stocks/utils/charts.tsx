@@ -57,11 +57,23 @@ export const GetChartData = ({ symbol, range = "30" }: Props) => {
 
       try {
         const response = await fetch(Url);
-        // Type response JSON
-        const data: { resultsCount: number; results: PolygonResult[] } = await response.json();
+        
+         if (!response.ok) {
+          throw new Error(`Polygon API error: ${response.status} ${response.statusText}`);
+        }
 
-        if (!data || data.resultsCount === 0 || !Array.isArray(data.results)) {
-          throw new Error(`Invalid symbol "${symbol}" or no data available for the selected range.`);
+        const contentType = response.headers.get("content-type");
+        if (!contentType || !contentType.includes("application/json")) {
+          throw new Error("Polygon response is not valid JSON");
+        }
+
+        const data = await response.json();
+
+        if (!data || !Array.isArray(data.results) || data.results.length === 0) {
+          console.warn(`No chart data found for symbol: ${symbol}`);
+          setDates([]);
+          setPrices([]);
+          return;
         }
 
         const newLabels = data.results.map((entry) => new Date(entry.t).toLocaleDateString());
