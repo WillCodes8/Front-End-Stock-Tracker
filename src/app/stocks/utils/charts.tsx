@@ -76,8 +76,10 @@ export const GetChartData = ({ symbol, range = "30" }: Props) => {
           return;
         }
 
-        const newLabels = data.results.map((entry) => new Date(entry.t).toLocaleDateString());
-        const newPrices = data.results.map((entry) => entry.c);
+        const newLabels = data.results.map((entry: PolygonResult) =>
+          new Date(entry.t).toLocaleDateString()
+        );
+        const newPrices = data.results.map((entry: PolygonResult) => entry.c);
 
         if (newPrices.length > 0) {
           const startPrice = newPrices[0];
