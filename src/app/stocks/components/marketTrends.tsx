@@ -20,6 +20,7 @@ const MarketTrends = () => {
 
     useEffect(() => {
         const tickerSymbols = ["NVDA", "VTI"];
+        //
 
         tickerSymbols.forEach(ticker => {
         getStockData(ticker)
