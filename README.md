@@ -53,6 +53,6 @@ pnpm install
 STOCK_KEY=your_polygon_api_key_here
 
 4. Start The Server: 
-(npm run dev
+npm run dev
 # or
-yarn dev)
+yarn dev
