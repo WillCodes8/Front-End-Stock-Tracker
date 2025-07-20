@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+A real-time dashboard for monitoring stock prices and cryptocurrency exchange rates, built with Next.js, React, TypeScript, and Tailwind CSS.
 
-## Getting Started
+stock-crypto-dashboard/
+├── app/                   # Next.js App Router
+│   ├── components/        # Shared UI components (Navbar, Footer, etc.)
+│   ├── stocks/            # Stock dashboard pages & logic
+│   ├── crypto/            # Crypto dashboard pages & logic (NOT IMPLEMENTED CURRENTLY)
+│   ├── layout.tsx         # Application layout
+│   └── page.tsx           # Home page
+├── public/                # Static assets
+├── styles/                # Global styles (Tailwind CSS)
+├── .env.local             # Environment variables (not committed)
+├── next.config.ts         # Next.js configuration
+├── package.json           # Dependencies & scripts
+└── README.md 
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
+- **Live Stock Prices**: Fetches stock data from Polygon.io (daily aggregates).
+- **Real-Time Crypto Rates**: Retrieves cryptocurrency exchange rates from CoinAPI.
+- **Interactive Charts**: Visualize data with Chart.js.
+- **Responsive UI**: Styled with Tailwind CSS.
+- **Server-Side Rendering**: Powered by Next.js App Router.
+
+## Tech Stack
+
+- **Framework**: Next.js
+- **Frontend**: React, TypeScript
+- **Styling**: Tailwind CSS
+- **Charts**: Chart.js
+- **APIs**: Polygon.io, CoinAPI
+
+## Prerequisites
+
+- Node.js v16+ installed
+- npm, yarn, or pnpm
+
+## Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/stock-crypto-dashboard.git
+   cd stock-crypto-dashboard
+
+2. 
+npm install
 # or
-yarn dev
+yarn install
 # or
-pnpm dev
+pnpm install
+
+3. Create a .env.local file in the project root and add: 
+STOCK_KEY=your_polygon_api_key_here
+
+4. Start The Server: 
+(npm run dev
 # or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+yarn dev)
